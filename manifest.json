@@ -1,10 +1,9 @@
 {
-  "name": "service-example",
+  "name": "gift-card-list",
   "vendor": "vtex",
-  "version": "0.2.0",
-  "title": "Service Example",
-  "description": "Reference app for VTEX IO Services",
-  "mustUpdateAt": "2018-01-04",
+  "version": "0.0.1",
+  "title": "Gift Card of a Present List",
+  "description": "Gift Card of a Present List",
   "categories": [],
   "dependencies": {},
   "builders": {
@@ -19,15 +18,19 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "httpstat.us",
-        "path": "*"
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/*"
       }
     },
     {
-      "name": "colossus-fire-event"
+      "name": "ADMIN_DS"
     },
     {
-      "name": "colossus-write-logs"
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/api/giftcards/*"
+      }
     }
   ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"

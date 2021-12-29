@@ -6,9 +6,9 @@
   "maxReplicas": 4,
   "workers": 1,
   "routes": {
-    "status": {
-      "path": "/_v/status/:code",
-      "public": true
+    "createGiftCard": {
+      "path": "/_v/createGiftCard",
+      "public": false
     }
   }
 }

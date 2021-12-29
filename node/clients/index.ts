@@ -1,10 +1,15 @@
 import { IOClients } from '@vtex/api'
 
-import Status from './status'
+import { profileSystem } from './profileSystem'
+import { giftCard } from './giftCard'
 
 // Extend the default IOClients implementation with our own custom clients.
 export class Clients extends IOClients {
-  public get status() {
-    return this.getOrSet('status', Status)
+  public get profileSystem() {
+    return this.getOrSet('profileSystem', profileSystem)
+  }
+
+  public get giftCard() {
+    return this.getOrSet('giftCard', giftCard)
   }
 }
